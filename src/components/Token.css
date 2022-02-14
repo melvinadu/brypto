@@ -1,0 +1,56 @@
+.token-container{
+  display: flex;
+  justify-content: center;
+}
+.token-row{
+  display: flex;
+  flex-direction: row;
+  justify-items: start;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid #d7d7d7;
+  width: 900px;
+}
+.token{
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  min-width: 300px;
+}
+.token img{
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+.token h1{
+  font-size: 16px;
+  width: 150px;
+}
+.token-symbol{
+  text-transform: uppercase;
+
+}
+.token-data{
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.token-price{
+  width:110px;
+}
+.token-volume{
+  width: 230px;
+}
+.token-marketcap{
+  width: 155px;
+}
+.token-percent{
+  width: 100%;
+}
+.red{
+  color: #f00606;
+}
+.green{
+  color: #11d811;
+}
