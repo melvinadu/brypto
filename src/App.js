@@ -30,6 +30,8 @@ function App() {
   const filteredTokens = tokens.filter(token=>
     token.name.toLowerCase().includes(search.toLowerCase())
     )
+
+    
   return (
     <>
     <Router>
@@ -49,7 +51,7 @@ function App() {
       <div className="token-search">
         {/* <h1 className="token-text">Search your desired token</h1> */}
         <form action="">
-          <input type="text" className="token-input" placeholder="Provide the token name" onChange={handleChange}/>
+          <input type="text" className="token-input" placeholder="Search for a token" onChange={handleChange}/>
 
         </form>
 
