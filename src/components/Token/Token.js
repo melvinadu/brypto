@@ -11,17 +11,25 @@ const Token = ({image,name,price,volume,pricechange,marketcap}) => {
                     <p className="token-symbol"></p>
                 </div>
                 <div className="token-data">
+                    <div>
                     <p className="token-price">Price: {price}</p>
-                     <p className="token-volume">Volume: {volume.toLocaleString()}</p>
+                    </div>
+                    <div>
+                    <p className="token-volume">Volume: {volume.toLocaleString()}</p>
+                    </div>
+                    <div>
                     {pricechange<0 ? (
                         <p className="token-percent red">{pricechange.toFixed(2)}%</p>
                     ):(
                         <p className="token-percent green">{pricechange.toFixed(2)}%</p>
                     )
-                }
-                <p className="token-marketcap">
-                    Mkt Cap: {marketcap.toLocaleString()}
-                </p>
+                    }
+                    </div>
+                    <div>
+                    <p className="token-marketcap">
+                        Mkt Cap: {marketcap.toLocaleString()}
+                    </p>
+                    </div>
                 </div>
             </div>
             
