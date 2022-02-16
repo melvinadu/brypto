@@ -4,12 +4,13 @@ import styled from 'styled-components';
 import './NavbarElements.css'
   
 export const Nav = styled.nav`
-  background: #63D471;
+  background: white;
   height: 85px;
   display: flex;
   justify-content: space-between;
   padding: 0.2rem calc((100vw - 1000px) / 2);
   z-index: 12;
+  border: 5px solid red;
   /* Third Nav */
   /* justify-content: flex-start; */
 `;
