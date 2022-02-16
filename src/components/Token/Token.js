@@ -2,6 +2,10 @@ import React from 'react'
 import './Token.css'
 
 const Token = ({image,name,price,volume,pricechange,marketcap}) => {
+    function currencyFormat(num) {
+        return '$' + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+     }
+
     return (
         <div className="token-container">
             <div className="token-row">
@@ -12,7 +16,7 @@ const Token = ({image,name,price,volume,pricechange,marketcap}) => {
                 </div>
                 <div className="token-data">
                     <div>
-                    <p className="token-price">Price: {price}</p>
+                    <p className="token-price">Price: {currencyFormat(price)} USD</p>
                     </div>
                     <div>
                     <p className="token-volume">Volume: {volume.toLocaleString()}</p>
