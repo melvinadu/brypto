@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import './NavbarElements.css'
   
 export const Nav = styled.nav`
-  background: #63D471;
+  background: red;
   height: 85px;
   display: flex;
   justify-content: space-between;
