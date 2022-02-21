@@ -40,3 +40,8 @@ color: #e2e2e2;
 .token-input::placeholder{
   color: #e2e2e2;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
