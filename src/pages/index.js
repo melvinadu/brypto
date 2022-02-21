@@ -8,7 +8,6 @@ const Home = () => {
   const [tokens, setTokens] = useState([]);
   const [search, setSearch] = useState("");
   const [pageNumber, setPageNumber] = useState(0);
-  // console.log(tokens);
 
   const tokensPerPage = 10;
   const pagesVisited = pageNumber * tokensPerPage;
@@ -29,11 +28,8 @@ const Home = () => {
     setSearch(e.target.value);
   };
 
-  const filteredTokens = tokens.filter((token) =>
-    token.name.toLowerCase().includes(search.toLowerCase())
-  );
-
   const displayTokens = tokens
+    .filter((token) => token.name.toLowerCase().includes(search.toLowerCase()))
     .slice(pagesVisited, pagesVisited + tokensPerPage)
     .map((token) => {
       return (
@@ -50,10 +46,16 @@ const Home = () => {
       );
     });
 
-  console.log(tokens.slice(pagesVisited, pagesVisited + tokensPerPage));
-  console.log(displayTokens);
+  console.log("-----", displayTokens.length);
 
-  const pageCount = Math.ceil(tokens.length / tokensPerPage);
+  let pageCount = Math.ceil(tokens.length / tokensPerPage);
+
+  let disabled = false;
+
+  if (displayTokens.length < 10) {
+    pageCount = 0;
+    disabled = true;
+  }
 
   const changePage = ({ selected }) => {
     setPageNumber(selected);
@@ -74,17 +76,16 @@ const Home = () => {
           </form>
         </div>
       </div>
-
       {displayTokens}
+
       <div className="paginationBttns">
         <ReactPaginate
           previousLabel={"Previous"}
           nextLabel={"Next"}
           pageCount={pageCount}
           onPageChange={changePage}
-          // containerClassName={"paginationBttns"}
-          previousLinkClassName={"previousBttn"}
-          nextLinkClassName={"nextBttn"}
+          previousLinkClassName={`${disabled ? "disabled" : "previousBttn"}`}
+          nextLinkClassName={`${disabled ? "disabled" : "nextBttn"}`}
           disabledClassName={"paginationDisabled"}
           activeClassName={"paginationActive"}
         />
@@ -94,20 +95,3 @@ const Home = () => {
 };
 
 export default Home;
-
-{
-  /* {filteredTokens.map((token) => {
-        return (
-          <Token
-            key={token.id}
-            name={token.name}
-            image={token.image}
-            symbol={token.symbol}
-            marketcap={token.market_cap}
-            price={token.current_price}
-            pricechange={token.price_change_percentage_24h}
-            volume={token.total_volume}
-          />
-        );
-      })} */
-}
