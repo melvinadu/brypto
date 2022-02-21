@@ -51,7 +51,7 @@
   list-style: none; */
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  padding: 50px 0 100px 0;
 }
 
 .paginationBttns a {
@@ -79,4 +79,14 @@
 
 .paginationBttns ul {
   display: flex;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.disabled {
+  display: none;
 }
