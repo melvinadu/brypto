@@ -37,7 +37,7 @@ const Navbar = () => {
             News
           </NavLink>
           <NavLink to='/sign-up' activeStyle>
-            Sign Up
+            Search
           </NavLink>
           {/* Second Nav */}
           {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}

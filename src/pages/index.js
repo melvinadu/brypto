@@ -6,7 +6,6 @@ import Token from "../components/Token/Token";
 
 const Home = () => {
   const [tokens, setTokens] = useState([]);
-  const [search, setSearch] = useState("");
   const [pageNumber, setPageNumber] = useState(0);
 
   const tokensPerPage = 10;
@@ -24,23 +23,21 @@ const Home = () => {
       .catch((error) => console.log(error));
   }, []);
 
-  const handleChange = (e) => {
-    setSearch(e.target.value);
-  };
-
   const displayTokens = tokens
-    .filter((token) => token.name.toLowerCase().includes(search.toLowerCase()))
     .slice(pagesVisited, pagesVisited + tokensPerPage)
     .map((token) => {
       return (
         <Token
           key={token.id}
+          rank={token.market_cap_rank}
           name={token.name}
           image={token.image}
           symbol={token.symbol}
           marketcap={token.market_cap}
+          high={token.high_24h}
+          low={token.low_24h}
           price={token.current_price}
-          pricechange={token.price_change_percentage_24h}
+          pricechange24={token.price_change_percentage_24h}
           volume={token.total_volume}
         />
       );
@@ -63,19 +60,8 @@ const Home = () => {
 
   return (
     <>
-      <div className="token-app">
-        <div className="token-search">
-          {/* <h1 className="token-text">Search your desired token</h1> */}
-          <form action="">
-            <input
-              type="text"
-              className="token-input"
-              placeholder="Provide the token name"
-              onChange={handleChange}
-            />
-          </form>
-        </div>
-      </div>
+    <h2>Token Prices by Market Cap</h2>
+
       {displayTokens}
 
       <div className="paginationBttns">

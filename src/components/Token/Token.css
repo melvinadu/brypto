@@ -5,22 +5,28 @@
 .token-row{
   display: flex;
   flex-direction: row;
-  justify-items: start;
+  justify-content: space-between;
   align-items: center;
+  text-align: center;
   height: 80px;
   border-bottom: 1px solid #d7d7d7;
-  width: 900px;
+  border-top: 1px solid #d7d7d7;
+  width: 90%;
 }
+
+.token-rank {
+  padding-left: -20px;
+  padding-right: -20px;
+}
+
 .token{
   display: flex;
   align-items: center;
-  padding: 24px;
-  min-width: 300px;
 }
 .token img{
   height: 30px;
   width: 30px;
-  margin-right: 10px;
+  margin: 10px 10px;
 }
 .token h1{
   font-size: 16px;
@@ -30,12 +36,7 @@
   text-transform: uppercase;
 
 }
-.token-data{
-  display: flex;
-  text-align: center;
-  justify-content: space-between;
-  width: 100%;
-}
+
 .token-price{
   width:110px;
 }
@@ -53,4 +54,12 @@
 }
 .green{
   color: #11d811;
+}
+
+p {
+  text-decoration: none;
+}
+
+.price-change {
+  min-width: 50px;
 }
