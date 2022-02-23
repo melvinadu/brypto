@@ -36,6 +36,7 @@ const Blogs = () => {
       >
       </iframe>
       </div>
+      <h1>Cryptoken News</h1>
     </div>
   );
 };
