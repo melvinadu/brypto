@@ -1,15 +1,6 @@
 import React from 'react';
-import * as rssParser from 'react-native-rss-parser';
-import XMLParser from 'react-xml-parser';
   
 const Blogs = () => {
-
-  fetch('https://blockchain.news/RSS/', {mode: "no-cors"})
-  .then(response => response.text())
-  .then((data) => {
-    let xml = new XMLParser().parseFromString(data); 
-    console.log(xml);
-  });
  
   return (
     <div
@@ -36,7 +27,6 @@ const Blogs = () => {
       >
       </iframe>
       </div>
-      <h1>Cryptoken News</h1>
     </div>
   );
 };

@@ -15,20 +15,15 @@ const Navbar = () => {
         <Bars />
   
         <NavMenu>
-<<<<<<< HEAD
           {/* <NavLink to="/" activeStyle>
           <img className="logo" src="logo.png" alt="BigCo Inc. logo"/>
           </NavLink> */}
           <NavLink to="/" activeStyle>
             <span>Cryptoken</span>
-=======
-          <NavLink to='/' activeStyle>
-            <span>Brypto</span>
->>>>>>> f1dcb5c29906dbd0f8841a2a03f357c6d17ac2aa
           </NavLink>
-          <NavLink to='/about' activeStyle>
+          {/* <NavLink to='/about' activeStyle>
             About
-          </NavLink>
+          </NavLink> */}
           {/* <NavLink to='/events' activeStyle>
             Events
           </NavLink>
