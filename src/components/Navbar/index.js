@@ -16,7 +16,7 @@ const Navbar = () => {
 
         <NavMenu>
           <NavLink to="/" activeStyle>
-            <span>Brypto</span>
+            <span>Cryptoken</span>
           </NavLink>
           {/* <NavLink to='/about' activeStyle>
             About
