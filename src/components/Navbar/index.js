@@ -36,15 +36,15 @@ const Navbar = () => {
           <NavLink to='/blogs' activeStyle>
             News
           </NavLink>
-          {/* <NavLink to='/sign-up' activeStyle>
+          <NavLink to='/sign-up' activeStyle>
             Sign Up
-          </NavLink> */}
+          </NavLink>
           {/* Second Nav */}
           {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
         </NavMenu>
-        {/* <NavBtn>
+        <NavBtn>
           <NavBtnLink to='/signin'>Sign In</NavBtnLink>
-        </NavBtn> */}
+        </NavBtn>
       </Nav>
     </>
   );

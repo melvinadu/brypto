@@ -90,6 +90,7 @@ const Home = () => {
           activeClassName={"paginationActive"}
         />
       </div>
+      
     </>
   );
 };
