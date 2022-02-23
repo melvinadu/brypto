@@ -60,7 +60,7 @@ const Home = () => {
 
   return (
     <>
-    <h2>Token Prices by Market Cap</h2>
+    <h2>Top 100 Token Prices by Market Cap</h2>
 
       {displayTokens}
 
