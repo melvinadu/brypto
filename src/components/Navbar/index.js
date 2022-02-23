@@ -15,8 +15,11 @@ const Navbar = () => {
         <Bars />
 
         <NavMenu>
+          {/* <NavLink to="/" activeStyle>
+          <img className="logo" src="logo.png" alt="BigCo Inc. logo"/>
+          </NavLink> */}
           <NavLink to="/" activeStyle>
-            <span>Brypto</span>
+            <span>Cryptoken</span>
           </NavLink>
           {/* <NavLink to='/about' activeStyle>
             About

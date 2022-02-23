@@ -30,19 +30,19 @@
   padding-left: 16px;
   width: 300px;
   height: 50px;
-  border-radius: 4px;
-  border: none;
+  border-radius: 16px;
+  border-width: 1px;
+  /* border: none;
   background-image: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(56, 45, 45, 0) 100%,
     rgba(0, 212, 255, 1) 100%
-  );
+  ); */
   /* background-image: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%); */
-  color: #e2e2e2;
 }
 .token-input::placeholder {
-  color: #e2e2e2;
+  color: black;
 }
 
 .paginationBttns {
@@ -58,19 +58,19 @@
   padding: 10px;
   margin: 8px;
   border-radius: 5px;
-  border: 1px solid red;
-  color: red;
+  border: 1px solid grey;
+  color: black;
   cursor: pointer;
 }
 
 .paginationBttns a:hover {
   color: white;
-  background-color: red;
+  background-color: black;
 }
 
 .paginationActive a {
   color: white;
-  background-color: red;
+  background-color: black;
 }
 
 .paginationBttns ::marker {
